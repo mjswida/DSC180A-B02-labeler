@@ -69,9 +69,12 @@ WaveSurfer.Regions = {
         var region;
 
         function eventDown(e) {
+            console.log("eventDown") //test print
             drag = true;
             if (typeof e.targetTouches !== 'undefined' && e.targetTouches.length === 1) {
-                e.clientX = e.targetTouches[0].clientX;
+                console.log("entered if statement") //test print
+                e.clientX = e.targetTouches[0].clientX; 
+                //e.clientY = e.targetTouches[0].clientY; //added by B02
             }
             start = my.wavesurfer.drawer.handleEvent(e);
             region = null;
@@ -83,6 +86,7 @@ WaveSurfer.Regions = {
             my.wrapper.removeEventListener('mousedown', eventDown);
         });
         function eventUp(e) {
+            //console.log("eventUp") //test print
             drag = false;
 
             if (region) {
@@ -99,6 +103,7 @@ WaveSurfer.Regions = {
             document.body.removeEventListener('mouseup', eventUp);
         });
         function eventMove(e) {
+            //console.log("eventMove") //test print
             if (!drag) { return; }
 
             if (!region) {
@@ -108,6 +113,7 @@ WaveSurfer.Regions = {
             var duration = my.wavesurfer.getDuration();
             if (typeof e.targetTouches !== 'undefined' && e.targetTouches.length === 1) {
                 e.clientX = e.targetTouches[0].clientX;
+
             }
             var end = my.wavesurfer.drawer.handleEvent(e);
             region.update({
