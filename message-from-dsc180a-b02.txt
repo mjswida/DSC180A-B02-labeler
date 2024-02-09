@@ -1,4 +1,9 @@
-As a note to the grader, we have spent most of this quarter exploring different ways to label and as such did not write much code this quarter.
-I know we did discuss this in our TA check, but I wanted to add this as an addition. This repository is a fork from the labeler we plan to edit into
-a two dimensional labeler. Thus far we have only done some minor tests, but any changes we made are part of the commit "quarter 1 project" and are
-currently commented out. They are also marked with another comment that says either "Added by B02" or "test print".
+Update for Quarter 2 Checkpoint:
+
+At this time we have been working on fitting this labeler to work better with our data by 
+fixing the buttons to have appropriate labels, removing the proximity tags, updating the 
+instructions, loading in a group of audio files to be labeled rather than just one, and 
+storing those labels in a local JSON file. At this time the buttons are fixed, proximity 
+tags are removed, and we are capable of storing at least one label in a JSON file. The 
+group of audio files is still a work in progress and we have decided to wait on the 
+isntructions until we do further testing.
