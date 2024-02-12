@@ -235,11 +235,12 @@ Annotator.prototype = {
     submitAnnotations: function() {
         // Check if all the regions have been labeled before submitting
         if (this.stages.annotationDataValidationCheck()) {
-            if (this.sendingResponse) {
+            // Guantong: I deleted this so it is always allowed to click the submit button.
+            //if (this.sendingResponse) {
                 // If it is already sending a post with the data, do nothing
-                return;
-            }
-            this.sendingResponse = true;
+            //    return;
+            //}
+            //this.sendingResponse = true;
             // Get data about the annotations the user has created
             var content = {
                 task_start_time: this.taskStartTime,
