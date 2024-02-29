@@ -284,7 +284,9 @@ Annotator.prototype = {
         // Create a download link
         var link = document.createElement('a');
         link.href = window.URL.createObjectURL(blob);
-        link.download = 'annotations.json'; // Set the filename
+
+        var audioFileName = dataUrl.substring(dataUrl.lastIndexOf('/') + 1, dataUrl.lastIndexOf('.'));
+        link.download = audioFileName + '.json'; // Set the filename
 
         // Append the link to the document and simulate a click
         document.body.appendChild(link);
