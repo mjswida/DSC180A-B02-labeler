@@ -1,9 +1,10 @@
-Update for Quarter 2 Checkpoint:
+How to run labeler:
 
-At this time we have been working on fitting this labeler to work better with our data by 
-fixing the buttons to have appropriate labels, removing the proximity tags, updating the 
-instructions, loading in a group of audio files to be labeled rather than just one, and 
-storing those labels in a local JSON file. At this time the buttons are fixed, proximity 
-tags are removed, and we are capable of storing at least one label in a JSON file. The 
-group of audio files is still a work in progress and we have decided to wait on the 
-isntructions until we do further testing.
+After cloning this repository, add any audio files to the json file in the code. Make sure to save the code. After that follow these steps:
+
+1. In your terminal cd into the DSC180A-B02-labeler directory
+2. Use this command in the terminal to start a local server: python3 -m http.server 8000
+3. Open this link in your browser: http://localhost:8000/examples/#! 
+4. If you hear someone whistling instead of the first audio file you added, either clear cache or open a new private/incognito window to see changes → command(mac) or control(other) + shift + R
+
+Assuming this all worked, you can now label your spectrogram and when you click "Submit and Load Next Recording" your labels will download from your browser as a json file and load the next audio file in from the json folder of the directory. Once you are out of recordings it will remain on the final recording.
